@@ -10,7 +10,7 @@ public class MagicSquare {
 		int sum1=0, sum2=0;
 		for(int i=0;i<array.length-1;i++){
 			for(int j=0;j<array.length;j++){
-				sum1+=array[i][j];
+				sum1+=array[i][j];	// NOTE: you are checking (row-0, col-0), (row-1, col-1), ... not shure if this is always correct
 				sum2+=array[j][i];
 			}
              if(sum1==sum2){
@@ -32,11 +32,14 @@ public class MagicSquare {
             // }
 		}
 		return true;
-	}
+	}	// NOTE: would be nice to have a blank line after each method
 	public static void main(String[] args){
-		int[][] testarray={{4,9,1},
-	                       {3,5,7},
-	                       {8,2,6}};
+		int[][] testarray={{9,2,4}, // NOTE: added a real magic square
+	                       {5,7,3},
+		                   {1,6,8}};
+		// int[][] testarray={{4,9,1},
+	    //                    {3,5,7},
+	    //                    {8,2,6}};
 	     boolean a=magicSquare(testarray);
 	     if(a==true){
 	     	System.out.println("the given matrix is a magic square");

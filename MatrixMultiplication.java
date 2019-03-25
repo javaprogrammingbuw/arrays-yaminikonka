@@ -1,5 +1,9 @@
 //2D Arrays
 public class MatrixMultiplication {
+
+	// NOTE: results are correct
+	// NOTE: would be nice to have multiplication in 1 method - not partially in a method and inside main
+	// NOTE: indentation in this file needs to be improved
 	
 	//Todo: Each 2D Array can be treated like a matrix.
 	//Write a method which takes two matrices as input and returns the result.
@@ -50,7 +54,7 @@ public class MatrixMultiplication {
                          {5,6,3}};
         int[][] testarr2={{1,2,5},
                           {3,4,6},
-                          {5,6,3}};                
+				                  {5,6,3}};  
          for(int o=0;o<testarr1.length;o++){
          	for(int l=0;l<testarr1.length;l++){
          		System.out.print(matrixMultip(testarr1,testarr2)[o][l]+" ");

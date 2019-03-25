@@ -26,7 +26,7 @@ public class SortAndSearch {
             }
 		}
        return array;  
-	}
+	}	// NOTE: would be nice to have a blank line after each method
 	public static int binSrch(int[] array0, int n){
 		int[] array=bubbleSrt(array0);
 		int min=0, max=array.length-1;
@@ -50,14 +50,14 @@ public class SortAndSearch {
 			
 			return n;
 		}*/
-	for(int i=0;i<array.length;i++){
+	for(int i=0;i<array.length;i++){	// NOTE: indentation is a little bit off from here
 		int srchIndex=Math.round((min+max)/2);
 		if(array[srchIndex]>n){
 			max=srchIndex-1;
 		}else if(array[srchIndex]<n){
 			min=srchIndex+1;
 		}else{
-			return n;
+			return n;	// NOTE: return value is wrong - if someone is searching for something he wants the position of that element, not the element itself
 		}
 	}
 	return -1;
@@ -72,7 +72,7 @@ public class SortAndSearch {
 		if(binSrch(testarray,7)==-1){
 			System.out.println("number is not there");
 		}else{
-			System.out.println("number is there");
+			System.out.println("number is there");	// NOTE: would be nice to see the index here
 		}
 		// System.out.println(binSrch(testarray, 2));
 		
