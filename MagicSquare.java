@@ -7,13 +7,18 @@ public class MagicSquare {
 	 * square or not.
 	 * */
 	public static boolean magicSquare(int[][] array){
-		int sum1=0, sum2=0;
+		int sum1=0, sum2=0,sum3=0,sum4=0;
 		for(int i=0;i<array.length-1;i++){
 			for(int j=0;j<array.length;j++){
-				sum1+=array[i][j];
-				sum2+=array[j][i];
+				sum1+=array[i][j];  // this is for the rows
+				sum2+=array[j][i];   // this is for the columns
+				if(i==0){
+					sum3+=array[i+1][j];  // for checking first row is equal to all other rows
+					sum4+=array[j][i+2];
+				}
 			}
-             if(sum1==sum2){
+
+             if(sum1==sum2&&sum1==sum3&&sum1==sum4){
                 sum1=0;sum2=0;
                 return true;
             }
@@ -34,9 +39,9 @@ public class MagicSquare {
 		return true;
 	}
 	public static void main(String[] args){
-		int[][] testarray={{4,9,1},
+		int[][] testarray={{4,9,2},
 	                       {3,5,7},
-	                       {8,2,6}};
+	                       {8,1,6}};
 	     boolean a=magicSquare(testarray);
 	     if(a==true){
 	     	System.out.println("the given matrix is a magic square");
