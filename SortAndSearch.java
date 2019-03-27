@@ -26,7 +26,7 @@ public class SortAndSearch {
             }
 		}
        return array;  
-	}
+	}	// NOTE: would be nice to have a blank line after each method
 	public static int binSrch(int[] array0, int n){
 		int[] array=bubbleSrt(array0);
 		
@@ -48,6 +48,7 @@ public class SortAndSearch {
 		// 	return binSrch(array2,n);
 		// }else{
 			
+<<<<<<< HEAD
 		// 	return n;
 		// }
 
@@ -55,6 +56,11 @@ public class SortAndSearch {
 		/** this iterative method of the binary search **/
 	    int min=0, max=array.length-1;
 	for(int i=0;i<array.length;i++){
+=======
+			return n;
+		}*/
+	for(int i=0;i<array.length;i++){	// NOTE: indentation is a little bit off from here
+>>>>>>> f38fcc43d7046b11121175853945672d5b0b8b92
 		int srchIndex=Math.round((min+max)/2);
 		System.out.println(srchIndex);
 		if(array[srchIndex]>n){
@@ -62,7 +68,7 @@ public class SortAndSearch {
 		}else if(array[srchIndex]<n){
 			min=srchIndex+1;
 		}else{
-			return n;
+			return n;	// NOTE: return value is wrong - if someone is searching for something he wants the position of that element, not the element itself
 		}
 	}
 	return -1;
@@ -77,7 +83,7 @@ public class SortAndSearch {
 		if(binSrch(testarray,7)==-1){
 			System.out.println("number is not there");
 		}else{
-			System.out.println("number is there");
+			System.out.println("number is there");	// NOTE: would be nice to see the index here
 		}
 		// int n=7;
 		// if(binSrch(testarray,n)==n){
